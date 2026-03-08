@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>個人履歷 - 董恩妤</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6fb;
+    margin:0;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    background:white;
+    padding:30px;
+    margin-top:40px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header{
+    text-align:center;
+}
+
+.header h1{
+    margin:10px;
+}
+
+.studentID{
+    color:gray;
+}
+
+.section{
+    margin-top:30px;
+}
+
+.section h2{
+    border-left:5px solid #6c8cff;
+    padding-left:10px;
+}
+
+ul{
+    line-height:1.8;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    background:#6c8cff;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#4c6ef5;
+}
+
+.hidden{
+    display:none;
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>董恩妤</h1>
+<p class="studentID">亞洲大學學生 | 學號：114024045</p>
+<p>Asia University Student Resume</p>
+</div>
+
+<div class="section">
+<h2>基本資料</h2>
+<ul>
+<li>姓名：董恩妤</li>
+<li>學校：亞洲大學</li>
+<li>學號：114024045</li>
+<li>身份：大學生</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>技能 Skills</h2>
+<ul>
+<li>HTML / CSS 基礎</li>
+<li>JavaScript 基礎</li>
+<li>Python 程式設計</li>
+<li>簡單網頁設計</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>學習經歷</h2>
+<ul>
+<li>亞洲大學在學</li>
+<li>學習程式設計與網頁開發</li>
+<li>參與資訊相關課程專題</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>自我介紹</h2>
+<p id="intro">
+我是一名亞洲大學的學生，目前正在學習程式設計與網頁開發。
+對於科技與設計有濃厚興趣，希望未來能持續提升自己的技術能力。
+</p>
+
+<button onclick="changeText()">點擊看更多</button>
+
+<p id="more" class="hidden">
+我喜歡學習新的技術，也樂於挑戰不同的專題與作業。
+未來希望能將程式能力與創意設計結合，做出更多有趣的作品。
+</p>
+
+</div>
+
+</div>
+
+<script>
+function changeText(){
+    var more = document.getElementById("more");
+    if(more.classList.contains("hidden")){
+        more.classList.remove("hidden");
+    }else{
+        more.classList.add("hidden");
+    }
+}
+</script>
+
+</body>
+</html>
