@@ -25,6 +25,14 @@ body{
     text-align:center;
 }
 
+.profile-photo{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:10px;
+}
+
 .header h1{
     margin:10px;
 }
@@ -72,10 +80,16 @@ button:hover{
 <div class="container">
 
 <div class="header">
+
+<!-- 個人照片 -->
+<img src="images/rabbit.jpg" class="profile-photo">
+
 <h1>董恩妤</h1>
 <p class="studentID">亞洲大學學生 | 學號：114024045</p>
 <p>Asia University Student Resume</p>
+
 </div>
+
 
 <div class="section">
 <h2>基本資料</h2>
@@ -87,6 +101,7 @@ button:hover{
 </ul>
 </div>
 
+
 <div class="section">
 <h2>技能 Skills</h2>
 <ul>
@@ -97,6 +112,7 @@ button:hover{
 </ul>
 </div>
 
+
 <div class="section">
 <h2>學習經歷</h2>
 <ul>
@@ -106,8 +122,10 @@ button:hover{
 </ul>
 </div>
 
+
 <div class="section">
 <h2>自我介紹</h2>
+
 <p id="intro">
 我是一名亞洲大學的學生，目前正在學習程式設計與網頁開發。
 對於科技與設計有濃厚興趣，希望未來能持續提升自己的技術能力。
@@ -124,15 +142,20 @@ button:hover{
 
 </div>
 
+
 <script>
+
 function changeText(){
     var more = document.getElementById("more");
+
     if(more.classList.contains("hidden")){
         more.classList.remove("hidden");
     }else{
         more.classList.add("hidden");
     }
+
 }
+
 </script>
 
 </body>
