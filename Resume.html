@@ -8,7 +8,7 @@
 body{
     margin:0;
     font-family: "Noto Sans TC", sans-serif;
-    background:#fff0f5;
+    background:#f5f2ee;
 }
 
 /* 卡片 */
@@ -18,33 +18,33 @@ body{
     display:flex;
     border-radius:20px;
     overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* 左邊 */
+/* 左側 */
 .left{
-    width:40%;
-    background:#ffe4ec;
+    width:38%;
+    background:#e8dfd5;
     padding:30px;
     text-align:center;
     position:relative;
 }
 
-/* 裝飾圓 */
+/* 裝飾 */
 .left::before{
     content:"";
-    width:120px;
-    height:120px;
-    background:#ffd6e0;
+    width:100px;
+    height:100px;
+    background:#d6c3b0;
     border-radius:50%;
     position:absolute;
     top:-30px;
     left:-30px;
 }
 
-/* 右邊 */
+/* 右側 */
 .right{
-    width:60%;
+    width:62%;
     background:#ffffff;
     padding:30px;
 }
@@ -55,7 +55,7 @@ body{
     height:150px;
     border-radius:50%;
     object-fit:cover;
-    border:5px solid white;
+    border:5px solid #fff;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
@@ -64,43 +64,47 @@ body{
     font-size:26px;
     margin-top:15px;
     font-weight:bold;
+    color:#4e4039;
 }
 
 .subtitle{
-    color:#888;
+    color:#8a7f77;
     margin-bottom:20px;
 }
 
 /* 標題 */
 .section-title{
-    background:#ffd6e0;
+    background:#d6c3b0;
     padding:6px 12px;
-    border-radius:10px;
+    border-radius:8px;
     display:inline-block;
     margin:15px 0 10px;
     font-size:14px;
+    color:#4e4039;
 }
 
-/* 文字 */
+/* 內容 */
 .info{
     font-size:14px;
     line-height:1.8;
+    color:#5c5149;
 }
 
 /* 技能條 */
 .skill{
     margin:12px 0;
+    color:#4e4039;
 }
 
 .bar{
-    background:#f1f1f1;
+    background:#eee;
     height:8px;
     border-radius:10px;
 }
 
 .bar div{
     height:8px;
-    background:#ff9bb3;
+    background:#a1866f;
     border-radius:10px;
 }
 
@@ -109,14 +113,28 @@ button{
     margin-top:10px;
     padding:6px 14px;
     border:none;
-    background:#ff9bb3;
+    background:#a1866f;
     color:white;
     border-radius:20px;
     cursor:pointer;
 }
 
+button:hover{
+    background:#8b6f5a;
+}
+
 .hidden{
     display:none;
+}
+
+/* Email連結樣式 */
+a{
+    color:#5c5149;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
 }
 </style>
 </head>
@@ -130,24 +148,25 @@ button{
         <img src="images/rabbit.jpg" class="profile-photo">
 
         <div class="name">董恩妤</div>
-        <div class="subtitle">ENYU ✿</div>
+        <div class="subtitle">ENYU</div>
 
         <div class="section-title">基本資料</div>
         <div class="info">
             🎓 亞洲大學<br>
             🆔 114024045<br>
-            💻 網頁設計學習中
+            💻 網頁設計學習中<br>
+            📧 <a href="mailto:anna9951224@gmail.com">anna9951224@gmail.com</a>
         </div>
 
         <div class="section-title">自我介紹</div>
         <p id="intro">
-            我喜歡設計與程式，也喜歡記錄生活中的美好瞬間。
+            對設計與程式充滿興趣，喜歡用影像與畫面記錄生活。
         </p>
 
-        <button onclick="toggleText()">more ✨</button>
+        <button onclick="toggleText()">more</button>
 
         <p id="more" class="hidden">
-            希望未來能成為能結合設計與技術的人，也想拍出更好看的照片！
+            希望未來能將設計、攝影與技術結合，創作更有溫度的作品。
         </p>
     </div>
 
@@ -155,10 +174,10 @@ button{
     <div class="right">
 
         <div class="section-title">學習經歷</div>
-        <ul>
+        <ul class="info">
             <li>亞洲大學在學</li>
-            <li>學習 HTML / CSS / JS</li>
-            <li>參與課程專題</li>
+            <li>學習 HTML / CSS / JavaScript</li>
+            <li>參與網頁設計專題</li>
         </ul>
 
         <div class="section-title">技能</div>
