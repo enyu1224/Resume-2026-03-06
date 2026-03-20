@@ -2,98 +2,116 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>個人履歷 - 董恩妤</title>
+<title>董恩妤 | 履歷</title>
 
 <style>
 body{
     margin:0;
     font-family: "Noto Sans TC", sans-serif;
-    background:#e9edf5;
+    background:#fff0f5;
 }
 
-/* 整體卡片 */
+/* 卡片 */
 .container{
     width:900px;
     margin:40px auto;
     display:flex;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* 左側 */
+/* 左邊 */
 .left{
-    width:35%;
-    background:#dcd6cc;
+    width:40%;
+    background:#ffe4ec;
     padding:30px;
     text-align:center;
+    position:relative;
 }
 
-/* 右側 */
+/* 裝飾圓 */
+.left::before{
+    content:"";
+    width:120px;
+    height:120px;
+    background:#ffd6e0;
+    border-radius:50%;
+    position:absolute;
+    top:-30px;
+    left:-30px;
+}
+
+/* 右邊 */
 .right{
-    width:65%;
-    background:#f8f8f8;
+    width:60%;
+    background:#ffffff;
     padding:30px;
 }
 
 /* 照片 */
 .profile-photo{
-    width:140px;
-    height:140px;
+    width:150px;
+    height:150px;
     border-radius:50%;
     object-fit:cover;
+    border:5px solid white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* 名字 */
 .name{
-    font-size:28px;
-    margin:15px 0 5px;
+    font-size:26px;
+    margin-top:15px;
     font-weight:bold;
 }
 
-.title{
-    color:#666;
+.subtitle{
+    color:#888;
     margin-bottom:20px;
 }
 
-/* 區塊標題 */
+/* 標題 */
 .section-title{
-    background:#8fb3d9;
-    padding:5px 10px;
-    margin:20px 0 10px;
-    font-weight:bold;
+    background:#ffd6e0;
+    padding:6px 12px;
+    border-radius:10px;
+    display:inline-block;
+    margin:15px 0 10px;
+    font-size:14px;
 }
 
-/* 左邊資料 */
+/* 文字 */
 .info{
-    text-align:left;
     font-size:14px;
     line-height:1.8;
 }
 
 /* 技能條 */
 .skill{
-    margin-bottom:10px;
+    margin:12px 0;
 }
 
 .bar{
-    background:#ddd;
+    background:#f1f1f1;
     height:8px;
-    border-radius:5px;
+    border-radius:10px;
 }
 
 .bar div{
     height:8px;
-    background:#f4c542;
-    border-radius:5px;
+    background:#ff9bb3;
+    border-radius:10px;
 }
 
 /* 按鈕 */
 button{
-    margin-top:15px;
-    padding:8px 15px;
+    margin-top:10px;
+    padding:6px 14px;
     border:none;
-    background:#6c8cff;
+    background:#ff9bb3;
     color:white;
-    border-radius:5px;
+    border-radius:20px;
     cursor:pointer;
 }
 
@@ -107,41 +125,40 @@ button{
 
 <div class="container">
 
-    <!-- 左側 -->
+    <!-- 左 -->
     <div class="left">
         <img src="images/rabbit.jpg" class="profile-photo">
 
         <div class="name">董恩妤</div>
-        <div class="title">Asia University</div>
+        <div class="subtitle">ENYU ✿</div>
 
         <div class="section-title">基本資料</div>
         <div class="info">
-            學號：114024045<br>
-            身份：大學生<br>
-            技能：HTML / CSS / JS
+            🎓 亞洲大學<br>
+            🆔 114024045<br>
+            💻 網頁設計學習中
         </div>
 
         <div class="section-title">自我介紹</div>
         <p id="intro">
-            我正在學習網頁開發與程式設計，對設計與科技有興趣。
+            我喜歡設計與程式，也喜歡記錄生活中的美好瞬間。
         </p>
 
-        <button onclick="toggleText()">查看更多</button>
+        <button onclick="toggleText()">more ✨</button>
 
         <p id="more" class="hidden">
-            希望未來能將設計與程式結合，做出更有創意的作品。
+            希望未來能成為能結合設計與技術的人，也想拍出更好看的照片！
         </p>
-
     </div>
 
-    <!-- 右側 -->
+    <!-- 右 -->
     <div class="right">
 
         <div class="section-title">學習經歷</div>
         <ul>
             <li>亞洲大學在學</li>
-            <li>修習網頁設計與程式課程</li>
-            <li>參與專題製作</li>
+            <li>學習 HTML / CSS / JS</li>
+            <li>參與課程專題</li>
         </ul>
 
         <div class="section-title">技能</div>
@@ -168,8 +185,7 @@ button{
 
 <script>
 function toggleText(){
-    var more = document.getElementById("more");
-    more.classList.toggle("hidden");
+    document.getElementById("more").classList.toggle("hidden");
 }
 </script>
 
