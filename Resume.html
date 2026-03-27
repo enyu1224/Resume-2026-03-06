@@ -131,8 +131,8 @@ button:hover{
 
 <body>
 
-<!-- 🎵 背景音樂（已修好） -->
-<audio id="bgm" loop>
+<!-- 🎵 音樂（保證能播版本） -->
+<audio controls>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
@@ -201,19 +201,6 @@ button:hover{
 function toggleText(){
     document.getElementById("more").classList.toggle("hidden");
 }
-
-// 🎵 音樂播放（保證能播）
-const bgm = document.getElementById("bgm");
-
-// 先靜音播放（避免被瀏覽器擋）
-bgm.muted = true;
-bgm.play();
-
-// 使用者點擊後開聲音
-window.addEventListener("click", function(){
-    bgm.muted = false;
-    bgm.play();
-}, { once: true });
 </script>
 
 </body>
