@@ -133,27 +133,8 @@ button:hover{
 
 <!-- 🎵 背景音樂 -->
 <audio id="bgm" autoplay loop>
-    <source src="audio/music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg">
 </audio>
-
-<audio id="bgm" autoplay loop playsinline>
-  <source src="audio/music.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-  const audio = document.getElementById("bgm");
-
-  // 嘗試直接播放
-  audio.play().catch(() => {
-    // 若被擋，快速解除靜音再播放
-    audio.muted = true;
-    audio.play();
-
-    setTimeout(() => {
-      audio.muted = false;
-    }, 100);
-  });
-</script>
 
 <div class="container">
 
@@ -227,6 +208,24 @@ window.addEventListener("click", function(){
     bgm.play();
 }, { once: true });
 </script>
-    <!--音樂來源：suno.ai-->
+
 </body>
+<audio id="bgm" autoplay loop playsinline>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const audio = document.getElementById("bgm");
+
+  // 嘗試直接播放
+  audio.play().catch(() => {
+    // 若被擋，快速解除靜音再播放
+    audio.muted = true;
+    audio.play();
+
+    setTimeout(() => {
+      audio.muted = false;
+    }, 100);
+  });
+</script>
 </html>
